@@ -51,7 +51,7 @@ import "fmt"
 func main() {
     s := "Hello, World!"
     sr := []rune(s)
-    // Modify the next line to print l
+    // Modify the next line to print the letter l
     // fmt.Println(sr)
 }
 ```
@@ -60,7 +60,7 @@ func main() {
 
 select the right index to print the underlying int value of the space character
 
-check the [ASCII table](`man ascii`) to find the right index. you can quite a man view of terminal by pressing `q`
+check the [ASCII table](`man ascii`) to find the right index. you can quit a man command view of terminal by pressing `q`
 
 ```go
 package main
@@ -150,3 +150,11 @@ func main() {
 - Ex 6: ld!
 - Ex 7: Hel
 - Ex 8: llo => to get to the answer you should have put the index(2) of the l character and the index(5). when you put index 5, it will select everything from index 2 to 5 (index 5 is not included in the range).
+
+## Notes
+
+s := "hello world" // this is a series of bytes
+sr := []rune(s) // this is a series of runes
+rune is what makes the bytes into a human readable character
+rune is an alias for int32 under the hood
+we still need to convert the rune to a string to print it
